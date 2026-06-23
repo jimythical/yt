@@ -13,6 +13,8 @@ A small starter project for pulling YouTube transcripts and turning them into co
 
 The official YouTube Data API can download captions only for videos your authorized account can manage. For public videos, this starter uses publicly available transcript data instead of the official captions download endpoint.
 
+A YouTube API key can still be useful for video metadata, search, channel data, and playlist data. Do not commit the real key to this public repo.
+
 ## Setup
 
 ```bash
@@ -20,6 +22,22 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
+
+## Add your YouTube API key
+
+Create a local file named `.env` in the project root, next to `README.md`:
+
+```bash
+cp .env.example .env
+```
+
+Then edit `.env` so it contains your real key:
+
+```bash
+YOUTUBE_API_KEY=your_real_key_here
+```
+
+The real `.env` file is ignored by Git, so it should stay on your machine and never get pushed to GitHub.
 
 ## Usage
 
